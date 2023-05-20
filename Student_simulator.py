@@ -45,9 +45,6 @@ class Student:
         if self.gladness < 30:
             print('You need to sleep!')
 
-        if self.mood() < 50:
-            print('You need to chill!')
-
     def live(self, day):
         day = 'Day' + str(day) + 'of' + self.name + 'life'
         print(f'{day:=^50}')
