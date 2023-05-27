@@ -52,11 +52,15 @@ def calculator():
                 continue
 
             print("Result: ", result)
-            break
 
         except ValueError:
             print("Incorrect input! Enter numbers.")
         except ZeroDivisionError:
             print('You can`t divide by zero')
+        except KeyboardInterrupt:
+            print("\nПрограма завершена користувачем.")
+            break
+        except OverflowError:
+            print("Переповнення числа!")
 
 calculator()
