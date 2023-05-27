@@ -32,9 +32,12 @@ except ZeroDivisionError:
 def calculator():
     while True:
         try:
-            num1 = float(input("1st number: "))
-            num2 = float(input("2nd number: "))
+            num1 = input("1st number: ")
+            num2 = input("2nd number: ")
             operator = input("Enter operator (+, -, *, /): ")
+
+            num1 = int(num1) if num1.isdigit() else float(num1)
+            num2 = int(num2) if num2.isdigit() else float(num2)
 
             if operator == '+':
                 result = num1 + num2
